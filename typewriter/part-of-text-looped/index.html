@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#element-h1 {
+    color: rgb(0, 0, 0);
+}
+
+#element-h1, #element {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    user-select: none;
+     /* You can remove the user-select: none; if you want */
+}
+
+#element {
+    border-right: 0.5rem solid rgb(89, 89, 89);
+    color: rgb(63, 63, 63);
+    /* Replaces the "|" For the typewriter effect, Don't remove this */
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+          <!-- Element to contain animated typing -->
+        <h1 id="element-h1">
+            This is the 
+            <span id="element"></span>
+        </h1>
+
+        <!-- Load library from the TypeScript CDN -->
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+        <!-- The Settings for the Typewriter Effect -->
+            <script>
+                var typed = new Typed('#element', {
+                strings: ['First Word', 'Second Word', 'Third Word'],
+                typeSpeed: 50,
+                backSpeed: 50,
+                /* Speed in Miliseconds for the typing effect */
+                loop: true,
+                loopCount: Infinity,
+                /* Makes it looped */
+                cursorChar: ''
+                /* Don't change cursorChar: ''; */
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
