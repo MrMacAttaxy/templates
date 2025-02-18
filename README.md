@@ -12,6 +12,6 @@ Join **Camouflage Network** if you have any questions!
 <br><br>
 https://dsc.gg/camouflage
 <br><br>
-(Also check out our youtube!)
+(Also check out our **youtube**!)
 <br><br>
 https://www.youtube.com/@camouflagenetwork
