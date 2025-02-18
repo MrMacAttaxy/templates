@@ -7,8 +7,7 @@ You can use the templates by just copying the code to your site!
 **No** you do not have to give credit, but a star on the repo is always awesome!
 ## Does this include the game/movie/other files?
 **No**, these templates do **not** contain any game/movie/other files, they are just templates for you to use!
-<hr>
-## Need helporhave any questions?
+## Need help or have any questions?
 Join **Camouflage Network** if you have any questions!
 <br><br>
 https://dsc.gg/camouflage
