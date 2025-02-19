@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor</title>
+    <style>
+        
+        /* this makes the original cursor hidden */
+        * {
+            cursor: none;
+        }
+
+        /* This is the styling for the cursor */
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 4px solid #005c22;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            transform: translate(-50%, -50%)
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 4px solid #005c22;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            transform: translate(-50%, -50%)
+        }
+    
+        .custom-cursor.hover {
+            transform: translate(-50%, -50%) scale(1.5);
+            background-color: rgba(9, 229, 35, 0.2)
+        }
+    
+        .custom-cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: #005c22;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.05s ease;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+</head>
+<body>
+    <!-- This is the cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+</body>
+</html>
+<script>
+    // This is the code for moving the cursor
+      const cursor = document.querySelector('.custom-cursor');
+      const cursorDot = document.querySelector('.custom-cursor-dot');
+      document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        cursorDot.style.left = e.clientX + 'px';
+        cursorDot.style.top = e.clientY + 'px'
+      });
+      document.addEventListener('mousedown', () => cursor.style.transform = 'translate(-50%, -50%) scale(0.7)');
+      document.addEventListener('mouseup', () => cursor.style.transform = 'translate(-50%, -50%) scale(1)');
+      document.querySelectorAll('a, button, .movie-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'))
+      });
+</script>
