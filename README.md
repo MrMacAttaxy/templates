@@ -15,3 +15,11 @@ https://dsc.gg/camouflage
 (Also check out our **youtube**!)
 <br><br>
 https://www.youtube.com/@camouflagenetwork
+
+
+# How do I know its what I want?
+## Links
+You can go to **https://templates-assets.flage.site/[thefolder/]**
+Example: https://templates-assets.flage.site/**movies/1/**
+## Download
+You can download the files and open the files from your files manager and view them.
