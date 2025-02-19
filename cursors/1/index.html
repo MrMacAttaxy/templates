@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor</title>
+    <style>
+        /* This is the styling for the cursor */
+        .crosshair {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            pointer-events: none;
+            background: none;
+            border: 4px solid rgba(8, 242, 8, 0.8);
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            }
+    </style>
+</head>
+<body>
+    <!-- This is the cursor -->
+    <div id="crosshair" class="crosshair"></div>
+</body>
+</html>
+<script>
+            // This code is for moving the cursor
+
+            let lastTime = 0;
+				const throttleDelay = 10;
+				const crosshair = document.querySelector('.crosshair');
+				let crosshairPosition = { x: 0, y: 0 };
+				let targetPosition = { x: 0, y: 0 };
+				const lerpSpeed = 0.2;
+
+				let cursorSize = 30;
+				let cursorOpacity = 1;
+
+				document.addEventListener('mousemove', function (e) {
+					const currentTime = new Date().getTime();
+					if (currentTime - lastTime >= throttleDelay) {
+						lastTime = currentTime;
+						targetPosition.x = e.clientX + window.scrollX;
+						targetPosition.y = e.clientY + window.scrollY;
+					}
+				});
+
+				function updateCursor() {
+					const deltaX = targetPosition.x - crosshairPosition.x;
+					const deltaY = targetPosition.y - crosshairPosition.y;
+
+					crosshairPosition.x += deltaX * lerpSpeed;
+					crosshairPosition.y += deltaY * lerpSpeed;
+
+					crosshair.style.left = (crosshairPosition.x - cursorSize / 6) + 'px';
+					crosshair.style.top = (crosshairPosition.y - cursorSize / 6) + 'px';
+					crosshair.style.width = cursorSize + 'px';
+					crosshair.style.height = cursorSize + 'px';
+					crosshair.style.opacity = cursorOpacity;
+
+					requestAnimationFrame(updateCursor);
+				}
+
+				updateCursor();
+</script>
