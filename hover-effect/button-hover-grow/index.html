@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* You can change the font or colors or sizing if needed */
+
+.main button {
+    background: rgb(0, 184, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    height: 8rem;
+    width: 15rem;
+    border: none;
+    border-radius: 100rem;
+    transition: all 0.4s ease;
+}
+.main button:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 20px 20px rgb(97, 241, 97);
+    /* You can remove the box shadow if you need to (the box shadow is the glowing effect) */
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+         <button>
+            Hover Over Me!
+         </button>
+    </div>
+</body>
+</html>
