@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+    .navbar {
+      background: rgba(0, 0, 255, 0.322);
+      width: 5rem;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%);
+      border-radius: 0vh 2vh 2vh 0vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: rgb(74, 74, 255) solid 0.2rem;
+      transition: all 0.5s ease;
+    }
+    .navbar:hover {
+      width: 10rem;
+    }
+    .navbar:hover li {
+      height: 10rem;
+    }
+    .navbar ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      padding: 0;
+      width: 100%;
+    }
+    .navbar li {
+      display: flex;
+      list-style: none;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 5rem;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      font-size: 2rem;
+      color: white;
+    }
+    .navbar li:hover {
+      background: rgba(255, 255, 255, 0.125);
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><i class='fa fa-home'></i></li>
+      <li><i class="material-icons">new_releases</i></li>
+      <li><i class="material-icons">account_circle</i></li>
+    </ul>
+  </div>
+</body>
+</html>
